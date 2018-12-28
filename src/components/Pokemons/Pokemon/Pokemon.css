@@ -1,0 +1,47 @@
+.Pokemon {
+    background-color: #777;
+    box-sizing: border-box;
+    border-radius: 7px;
+    margin: 1px;
+    position: relative;
+    width: 33%;
+}
+
+.Pokemon .PokemonId, .Pokemon h3 {
+    display: inline-block;
+}
+
+.Pokemon h3 {
+    text-transform: capitalize;
+}
+
+.PokemonId {
+    /* padding: 15px; */
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.Pokemon:hover {
+    background-color: #999;
+}
+
+@media screen and (max-width: 680px) and (min-width: 480px) {
+    .Pokemon {
+        width: 32%;
+        font-size: .7em;
+        background-color: #ff5;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .Pokemon {
+        background-color: rgb(168, 115, 168);
+        font-size: .5em;
+        width: 32%;
+    }
+
+    .PokemonId {
+        font-size: .3em;
+    }
+}

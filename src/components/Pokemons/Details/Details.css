@@ -1,0 +1,86 @@
+.Details {
+    border-radius: 20px;
+    margin: 10px 0;
+    padding: 10px;
+    right: 10px;
+    text-align: left;
+    top: 5px;
+    width: 100%;
+    z-index: 5;
+    background-color: rgb(255, 215, 85);
+}
+
+.Details img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Details label {
+    font-weight: bold;
+    margin-right: 3px;
+}
+
+.Details .PokemonName {
+    font-weight: bold;
+    text-transform: capitalize;
+    /* width: 100%; */
+}
+ 
+.left-side, .right-side {
+    display: inline-block;
+}
+
+.left-side {
+    width: 40%;
+}
+
+.right-side{
+    width: 60%;
+    float: right;
+}
+
+.poke-snap {
+    display: block;
+}
+
+.poke-snap span {
+    display: block;
+    text-align: center;
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1920px) {
+    .Details {
+        width: 50%;
+        margin: 10px auto;
+        height: 135px;
+    }
+
+    .left-side, .right-side {
+        height: 120px;
+        /* margin: 10px auto; */
+    }
+}
+
+@media screen and (min-width: 800px) and (max-width: 1080px) {
+    .Details {
+        /* background-color: blue; */
+        height: 135px;
+        margin: 10px auto;
+        width: 50%;
+    }
+
+    .left-side, .right-side {
+        height: 120px;
+        /* margin: 10px auto; */
+    }
+}
+
+@media screen and (min-width: 580px) and (max-width: 800px) {
+    .Details {
+        /* background-color: green; */
+        height: 135px;
+        margin: 10px auto;
+        width: 60%;
+    }
+}
