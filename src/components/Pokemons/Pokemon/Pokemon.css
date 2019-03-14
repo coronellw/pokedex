@@ -4,7 +4,6 @@
     border-radius: 7px;
     margin: 1px;
     position: relative;
-    width: 33%;
 }
 
 .Pokemon .PokemonId, .Pokemon h3 {
@@ -16,7 +15,6 @@
 }
 
 .PokemonId {
-    /* padding: 15px; */
     position: absolute;
     top: 5px;
     left: 5px;
@@ -28,8 +26,7 @@
 
 @media screen and (max-width: 680px) and (min-width: 480px) {
     .Pokemon {
-        width: 32%;
-        font-size: .7em;
+        font-size: .5em;
         background-color: #ff5;
     }
 }
@@ -37,11 +34,10 @@
 @media screen and (max-width: 480px) {
     .Pokemon {
         background-color: rgb(168, 115, 168);
-        font-size: .5em;
-        width: 32%;
+        font-size: .5rem;
     }
 
     .PokemonId {
-        font-size: .3em;
+        font-size: .3rem;
     }
 }

@@ -1,86 +1,56 @@
 .Details {
+    background-color: rgb(255, 215, 85);
+    border: 2px solid black;
     border-radius: 20px;
-    margin: 10px 0;
-    padding: 10px;
+    display: grid;
+    margin: 0 auto;
+    padding: 1rem;
     right: 10px;
     text-align: left;
     top: 5px;
-    width: 100%;
+    width: 70%;
     z-index: 5;
-    background-color: rgb(255, 215, 85);
-}
-
-.Details img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.Details label {
-    font-weight: bold;
-    margin-right: 3px;
-}
-
-.Details .PokemonName {
-    font-weight: bold;
-    text-transform: capitalize;
-    /* width: 100%; */
-}
- 
-.left-side, .right-side {
-    display: inline-block;
+    grid-template-columns: 2fr 1fr;
 }
 
 .left-side {
-    width: 40%;
-}
-
-.right-side{
-    width: 60%;
-    float: right;
-}
-
-.poke-snap {
-    display: block;
-}
-
-.poke-snap span {
-    display: block;
+    display: grid;
+    grid-template-rows:3fr 1fr 1fr;
     text-align: center;
 }
 
-@media screen and (min-width: 1080px) and (max-width: 1920px) {
-    .Details {
-        width: 50%;
-        margin: 10px auto;
-        height: 135px;
-    }
+.left-side img {
+  margin: 0 auto;
+}
 
-    .left-side, .right-side {
-        height: 120px;
-        /* margin: 10px auto; */
-    }
+.left-side .types {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.PokemonName {
+  text-transform: capitalize;
+  font-weight: 600;
+  margin: 0 auto;
+}
+
+.right-side {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.right-side label {
+  font-weight: bold;
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1920px) {
 }
 
 @media screen and (min-width: 800px) and (max-width: 1080px) {
-    .Details {
-        /* background-color: blue; */
-        height: 135px;
-        margin: 10px auto;
-        width: 50%;
-    }
-
-    .left-side, .right-side {
-        height: 120px;
-        /* margin: 10px auto; */
-    }
 }
 
-@media screen and (min-width: 580px) and (max-width: 800px) {
-    .Details {
-        /* background-color: green; */
-        height: 135px;
-        margin: 10px auto;
-        width: 60%;
+@media screen and (max-width: 800px) {
+    .right-side > div{
+      font-size: .9rem;
     }
-}
+} 

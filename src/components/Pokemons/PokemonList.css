@@ -1,7 +1,26 @@
 .PokemonList {
     align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.ctrl {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: .3rem;
+    margin: 1rem 0;
+}
+
+.btn {
+    background-color: #eedf0e;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: .3rem 0;
+    cursor: pointer;
+}
+
+.btn.disabled {
+    background-color: #7e7605;
+    cursor: not-allowed;
 }
