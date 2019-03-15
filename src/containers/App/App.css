@@ -10,35 +10,6 @@
   margin: 5px 0;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
 .App input {
   border-radius: 30px;
   margin: 0 auto;
@@ -47,28 +18,8 @@
   width: 80%;
 }
 
-header {
-  background-color: #b71818;
-  box-sizing: border-box;
-  border-bottom: 7px solid black;
-  height: 150px;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%;
-  z-index: 10;
-}
-
-.expand {
-  animation: increase-header-height .1s ease-in forwards;
-}
-
 .expand-section {
   animation: increase-section-margin .1s ease-in forwards;
-}
-
-.contract {
-  animation: decrease-header-height .1s ease-in forwards;
 }
 
 .contract-section {
@@ -76,13 +27,7 @@ header {
 }
 
 .appear {
-  /* animation-delay: 1s; */
   animation: fade-in .5s linear forwards;
-}
-
-@keyframes increase-header-height {
-  from {height: 150px;}
-  to {height: 300px}
 }
 
 @keyframes increase-section-margin {
@@ -90,29 +35,16 @@ header {
   to {margin-top: 310px}
 }
 
-@keyframes decrease-header-height {
-  from {height: 300px;}
-  to {height: 150px}
-}
-
 @keyframes decrease-section-margin {
   from {margin-top: 310px;}
   to {margin-top: 160px}
 }
-
 
 @keyframes fade-in {
   from{opacity: 0;}
   to {opacity: 1;}
 }
 
-/* header::after {
-  content:' ';
-  width: 10%;
-  margin: 0 auto;
-  background-color: white;
-  border-radius: 50px;
-} */
 
 section {
   margin-top: 160px;

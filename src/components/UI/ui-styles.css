@@ -1,0 +1,17 @@
+.expand {
+  animation: increase-header-height .1s ease-in forwards;
+}
+
+.collapse {
+  animation: decrease-header-height .1s ease-in forwards;
+}
+
+@keyframes decrease-header-height {
+  from {height: 300px;}
+  to {height: 150px}
+}
+
+@keyframes increase-header-height {
+  from {height: 150px;}
+  to {height: 300px}
+}

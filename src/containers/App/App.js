@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+// import { HashRouter, Route} from 'react-router-dom';
 
-import { pokedex } from '../../DataSource/axios.config';
-import PokemonList from '../../components/Pokemons/PokemonList';
-import Details from '../../components/Pokemons/Details/Details';
-import Footer from '../../components/UI/Footer';
+import { pokedex } from 'DataSource/axios.config';
+import PokemonList from 'components/Pokemons/PokemonList';
+import Header from 'components/UI/Header';
+import Footer from 'components/UI/Footer';
 import './App.css';
 
 class App extends Component {
@@ -72,32 +73,14 @@ class App extends Component {
 
     const { previous, next, filteredPokemons, totalPokemons, selectedPokemon } = this.state;
 
-    let details = selectedPokemon.sprites ? <Details
-      id={selectedPokemon.id}
-      name={selectedPokemon.name}
-      types={selectedPokemon.types}
-      weight={selectedPokemon.weight}
-      height={selectedPokemon.height}
-      img={selectedPokemon.sprites.front_default}
-      stats={selectedPokemon.stats}
-    /> : null;
-
     return (
       <div className="App">
-        <header className={selectedPokemon.name ? 'expand' : 'contract'}>
-          <div className="header-wrapper">
-            <h1>Pokedex</h1>
-
-            <input
-              type="text"
-              value={this.state.filter}
-              placeholder="Pokemon name or Id"
-              onChange={this.handleFilterUpdate}
-            />
-            {details}
-          </div>
-          <div className="ball-button" onClick={this.clearSelection}></div>
-        </header>
+        <Header
+          pokemon={selectedPokemon}
+          filter={this.state.filter}
+          filterUpdate={this.handleFilterUpdate}
+          clear={this.clearSelection}
+        />
         <section className={selectedPokemon.name ? 'expand-section' : 'contract-section'}>
           <PokemonList
             pokemons={filteredPokemons}
