@@ -1,5 +1,8 @@
 import React from 'react';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faForward, faFastForward, faBackward, faFastBackward } from '@fortawesome/free-solid-svg-icons';
+
 import './PokemonList.css';
 import Pokemon from './Pokemon/Pokemon';
 
@@ -21,30 +24,22 @@ const PokemonList = props => {
       {pokemons}
     </div>
     <div className="ctrl">
-      <span
-        className="btn"
-        onClick={props.redirectPkmn.bind(this, 'https://pokeapi.co/api/v2/pokemon/?limit=40')}
-      >
-        {'|<'}
-      </span>
-      <span
-        className={`btn ${backDisabled}`}
+      <FontAwesomeIcon
+        icon={faFastBackward}
+        onClick={props.redirectPkmn.bind(this, 'https://pokeapi.co/api/v2/pokemon/?limit=21')}
+      />
+      <FontAwesomeIcon
+        icon={faBackward}
         onClick={props.redirectPkmn.bind(this, props.previous)}
-      >
-        {'<<'}
-      </span>
-      <span
-        className={`btn ${fwdDisabled}`}
+      />
+      <FontAwesomeIcon
+        icon={faForward}
         onClick={props.redirectPkmn.bind(this, props.next)}
-      >
-        {'>>'}
-      </span>
-      <span
-        className="btn"
-        onClick={props.redirectPkmn.bind(this, `https://pokeapi.co/api/v2/pokemon/?limit=40&offset=${props.count-40}`)}
-      >
-        {'>|'}
-      </span>
+      />
+      <FontAwesomeIcon
+        icon={faFastForward}
+        onClick={props.redirectPkmn.bind(this, `https://pokeapi.co/api/v2/pokemon/?limit=21&offset=${props.count - 21}`)}
+      />
     </div>
   </div>;
 };

@@ -9,6 +9,12 @@ const Details = props => {
     return <Type key={t.type.name} type={t.type.name} />;
   }) : null;
 
+  let stats = props.stats ? props.stats.map((stat, index) => {
+    return (<span key={stat + index}>
+      <label>{stat.stat.name}:</label> <span>{stat.base_stat}</span>
+    </span>);
+  }) : null;
+
   return <div className="Details appear">
     <div className="left-side">
       <img src={props.img} alt={props.name} height="96" width="96" />
@@ -25,6 +31,9 @@ const Details = props => {
       <div>
         <label>Height:</label> <span>{props.height}</span>
       </div>
+      <span className="stats">
+        {stats}
+      </span>
     </div>
   </div>;
 };

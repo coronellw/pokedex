@@ -10,7 +10,7 @@
     top: 5px;
     width: 70%;
     z-index: 5;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 1fr;
 }
 
 .left-side {
@@ -37,9 +37,25 @@
 .right-side {
   display: grid;
   grid-template-columns: 1fr;
+  padding-left: 1rem;
 }
 
 .right-side label {
+  font-weight: bold;
+}
+
+.Details .stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  font-size: .6rem;
+}
+
+.Details .stats > span {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.Details .stats label {
   font-weight: bold;
 }
 

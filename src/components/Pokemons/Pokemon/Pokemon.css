@@ -2,7 +2,6 @@
     background-color: #777;
     box-sizing: border-box;
     border-radius: 7px;
-    margin: 1px;
     position: relative;
 }
 
@@ -34,10 +33,10 @@
 @media screen and (max-width: 480px) {
     .Pokemon {
         background-color: rgb(168, 115, 168);
-        font-size: .5rem;
+        font-size: .8rem;
     }
 
     .PokemonId {
-        font-size: .3rem;
+        font-size: .5rem;
     }
 }
