@@ -27,7 +27,7 @@ class App extends Component {
   componentDidMount() {
     let regexp = /https:\/\/pokeapi.co\/api\/v2\/pokemon\/([0-9]*)/i;
 
-    pokedex.get('/pokemon/', { params: { limit: 21 } })
+    pokedex.get('/pokemon/', { params: { limit: 24 } })
       .then(resp => {
         // console.log(`Pokemon List was received, updating ${resp.data.count} pokemons`);
         let pokemons = resp.data.results.map(p => { return { name: p.name.replace('-', ' '), id: p.url.match(regexp)[1] }; });

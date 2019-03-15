@@ -7,22 +7,29 @@
 }
 
 .ctrl {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: .3rem;
+    
     margin: 1rem 0;
 }
 
 .btn {
-    background-color: #eedf0e;
-    border: 2px solid black;
-    border-radius: 5px;
-    font-weight: bold;
-    padding: .3rem 0;
+    color: #eedf0e;
     cursor: pointer;
+    margin: 0 .2rem;
 }
 
 .btn.disabled {
-    background-color: #7e7605;
+    color: #7e7605;
     cursor: not-allowed;
+}
+
+@media screen and (min-width: 1080px) and (max-width: 1920px) {
+    .PokemonList {
+        grid-template-columns: repeat(6, 1fr)
+    }
+}
+  
+@media screen and (min-width: 800px) and (max-width: 1080px) {
+}
+  
+@media screen and (max-width: 800px) {
 }

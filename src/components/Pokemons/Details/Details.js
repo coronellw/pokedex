@@ -26,7 +26,7 @@ const Details = props => {
         <label>Id:</label> <span>{props.id}</span>
       </div>
       <div>
-        <label>Weight:</label> <span>{props.weight}</span>
+        <label>Weight:</label> <span>{props.weight} Lb.</span>
       </div>
       <div>
         <label>Height:</label> <span>{props.height}</span>

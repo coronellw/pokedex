@@ -25,20 +25,24 @@ const PokemonList = props => {
     </div>
     <div className="ctrl">
       <FontAwesomeIcon
+        className="btn"
         icon={faFastBackward}
-        onClick={props.redirectPkmn.bind(this, 'https://pokeapi.co/api/v2/pokemon/?limit=21')}
+        onClick={props.redirectPkmn.bind(this, 'https://pokeapi.co/api/v2/pokemon/?limit=24')}
       />
       <FontAwesomeIcon
+        className={`btn ${backDisabled}`}
         icon={faBackward}
         onClick={props.redirectPkmn.bind(this, props.previous)}
       />
       <FontAwesomeIcon
+        className={`btn ${fwdDisabled}`}
         icon={faForward}
         onClick={props.redirectPkmn.bind(this, props.next)}
       />
       <FontAwesomeIcon
+        className="btn"
         icon={faFastForward}
-        onClick={props.redirectPkmn.bind(this, `https://pokeapi.co/api/v2/pokemon/?limit=21&offset=${props.count - 21}`)}
+        onClick={props.redirectPkmn.bind(this, `https://pokeapi.co/api/v2/pokemon/?limit=24&offset=${props.count - 24}`)}
       />
     </div>
   </div>;

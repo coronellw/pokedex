@@ -46,7 +46,7 @@
 
 .Details .stats {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   font-size: .6rem;
 }
 
@@ -60,9 +60,15 @@
 }
 
 @media screen and (min-width: 1080px) and (max-width: 1920px) {
+  .Details .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (min-width: 800px) and (max-width: 1080px) {
+  .Details .stats {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media screen and (max-width: 800px) {
